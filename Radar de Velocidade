@@ -1,0 +1,43 @@
+# Linguagem-C
+Radar de Velocidade em C
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float velocidade_veiculo, velocidade_leve, velocidade_media, velocidade_grave, velocidade_gravissima;
+
+
+    velocidade_leve = 50 * 1.1;
+    velocidade_media = 70;
+    velocidade_grave = 90;
+    velocidade_gravissima = 110;
+    printf("Informe a velocidade: ");
+    scanf("%f",&velocidade_veiculo);
+
+    if (velocidade_veiculo <= velocidade_leve)
+    {
+        printf("Isento da multa");
+    }
+    else
+    if (velocidade_veiculo <= velocidade_media)
+    {
+        printf("3 pontos na carteira");
+    }
+    else
+     if (velocidade_veiculo <= velocidade_grave)
+    {
+        printf("4 pontos na carteira");
+    }
+    else
+    if (velocidade_veiculo <= velocidade_gravissima)
+    {
+        printf("5 pontos na carteira");
+    } 
+    else printf("7 pontos na carteira")
+    return 0;
+
+}
+
+
