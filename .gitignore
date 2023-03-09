@@ -1,52 +1,40 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+#include <stdlib.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main()
+{
+    float velocidade_veiculo, velocidade_leve, velocidade_media, velocidade_grave, velocidade_gravissima;
 
-# Linker output
-*.ilk
-*.map
-*.exp
 
-# Precompiled Headers
-*.gch
-*.pch
+    velocidade_leve = 50 * 1.1;
+    velocidade_media = 70;
+    velocidade_grave = 90;
+    velocidade_gravissima = 110;
+    printf("Informe a velocidade: ");
+    scanf("%f",&velocidade_veiculo);
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+    if (velocidade_veiculo <= velocidade_leve)
+    {
+        printf("Isento da multa");
+    }
+    else
+    if (velocidade_veiculo <= velocidade_media)
+    {
+        printf("3 pontos na carteira");
+    }
+    else
+     if (velocidade_veiculo <= velocidade_grave)
+    {
+        printf("4 pontos na carteira");
+    }
+    else
+    if (velocidade_veiculo <= velocidade_gravissima)
+    {
+        printf("5 pontos na carteira");
+    } 
+    else printf("7 pontos na carteira")
+    return 0;
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+}
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
